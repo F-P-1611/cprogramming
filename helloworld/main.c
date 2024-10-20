@@ -2,7 +2,9 @@
 
 int main(void){
 
-    printf("hallo welt");
+    int i;
+    scanf("please enter an integer \n", &i);
+    printf("hallo welt %d", i);
 
     return 0;
 
