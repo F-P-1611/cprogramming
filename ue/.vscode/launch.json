@@ -1,0 +1,32 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "C/C++: clang build and debug active file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}", // Output file without extension
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true, // Use an external terminal for input
+            "MIMode": "lldb", // Use LLDB as the debugger
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for lldb",
+                    "text": "settings set target.max-memory-read-per-block 512",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "clang build active file", // Build task reference
+           // "miDebuggerPath": "/usr/bin/lldb", // Path to lldb
+            "internalConsoleOptions": "neverOpen"
+        }
+
+    ]
+}

@@ -1,11 +1,11 @@
- #include <stdio.h>
+#include <stdio.h>
+int main () {
 
-int main(void){
-
-    int i;
-    scanf("please enter an integer \n", &i);
-    printf("hallo welt %d", i);
-
-    return 0;
-
+    int x;
+    printf("Insert an integer number\n");
+    scanf("%d", &x);
+    for(int i = 0; i <= x; i = i + 1)
+        {
+            printf("%d\n", i);
+    } 
 }

@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "clang build active file",
+            "type": "shell",
+            "command": "clang",
+            "args": [
+                "-g", // Include debugging information
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}" // Output executable
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
